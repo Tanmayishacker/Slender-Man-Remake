@@ -591,72 +591,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &291661189
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 291661191}
-  - component: {fileID: 291661190}
-  m_Layer: 0
-  m_Name: BackGround Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!328 &291661190
-VideoPlayer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 291661189}
-  m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 0b373a3fefd0ca0498b866f477b20e0f, type: 3}
-  m_TargetCameraAlpha: 1
-  m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 455917373}
-  m_TargetTexture: {fileID: 8400000, guid: db175011400eede44b613660842f21a0, type: 2}
-  m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 2
-  m_AspectRatio: 5
-  m_DataSource: 0
-  m_TimeUpdateMode: 2
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 0
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
-  m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
-  m_SkipOnDrop: 1
-  m_Looping: 1
-  m_WaitForFirstFrame: 1
-  m_FrameReadyEventEnabled: 0
-  m_VideoShaders: []
---- !u!4 &291661191
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 291661189}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &380914702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,6 +1296,8 @@ MonoBehaviour:
   startMenu: {fileID: 3909783898576344018}
   settingsMenu: {fileID: 1394868132}
   creditsMenu: {fileID: 1868329141}
+  postProcessingVolume: {fileID: 0}
+  postProfile: {fileID: 11400000, guid: 7d809a1a8c26dc545bc079e144905a27, type: 2}
   audioMixer: {fileID: 24100000, guid: 7aa3f7b7fd0ee7244824d6f2e1bd1078, type: 2}
 --- !u!1 &969631099
 GameObject:
@@ -2300,7 +2236,7 @@ RectTransform:
   m_GameObject: {fileID: 1513421707}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 18, y: 13, z: 10}
+  m_LocalScale: {x: 1.8000001, y: 1.3000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1394868136}
@@ -4006,5 +3942,4 @@ SceneRoots:
   - {fileID: 1868329145}
   - {fileID: 256648491}
   - {fileID: 690910133}
-  - {fileID: 291661191}
   - {fileID: 1799574159}

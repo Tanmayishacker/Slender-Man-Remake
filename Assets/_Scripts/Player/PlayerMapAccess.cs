@@ -1,30 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMapAccess : MonoBehaviour
 {
     public GameObject buttonPress;
-    [SerializeField] private Transform camTransformPoistion;
     [SerializeField] private float rayMaxDis;
     [SerializeField] private LayerMask mapRayLayer;
-    private string objectToBeDestroyed = "Map";
+    [SerializeField] private Transform camTransformPoistion;
+
+    // Private Variables not exposed to editor.
     private RaycastHit hit;
-    private Ray objectDestoryRay;
 
     [Header("Key To Press: ")]
     [SerializeField] private KeyCode keyToCollectMap ;
+
+
+
     void Update()
     {
 
-        bool PaperChecker = Physics.Raycast(camTransformPoistion.position, camTransformPoistion.forward, rayMaxDis, mapRayLayer);
+        bool PaperChecker = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, rayMaxDis,mapRayLayer);
 
-        objectDestoryRay = new Ray(camTransformPoistion.position, camTransformPoistion.forward * rayMaxDis);
-
-
-        if(PaperChecker == true)
+        if(PaperChecker)
         {
-            RayDestroyObject(objectDestoryRay);
+            buttonPress.SetActive(true);
+            RayDestroyObject();
         }
         else
         {
@@ -35,15 +34,16 @@ public class PlayerMapAccess : MonoBehaviour
     }
 
 
-    void RayDestroyObject(Ray rayRef)
+    void RayDestroyObject()
     {
-         buttonPress.SetActive(true);
-            Debug.Log("Paper got");
-            if (Input.GetKeyDown(keyToCollectMap) == true && hit.collider.tag == objectToBeDestroyed)
-            {
-                buttonPress.SetActive(false);
-                Destroy(hit.transform);
-                
-            }
+        Debug.Log("Paper got");
+
+        if (Input.GetKeyDown(keyToCollectMap))
+        {
+            buttonPress.SetActive(false);
+            Destroy(hit.transform.gameObject);
+        }
+
+
     }
 }

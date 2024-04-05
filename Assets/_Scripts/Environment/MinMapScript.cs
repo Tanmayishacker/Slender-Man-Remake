@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MinMapScript : MonoBehaviour
@@ -9,8 +7,8 @@ public class MinMapScript : MonoBehaviour
     private void LateUpdate() 
     {
         // Getting player position and pasting into the camers position. 
-        Vector3 newCamposition = playerLocationZX.position;
-        transform.position = newCamposition;
+        Vector3 newCameraPosition = new Vector3(playerLocationZX.position.x, transform.position.y, playerLocationZX.position.z);
+        transform.position = newCameraPosition;
 
         // Taking players rotation on x and y axis.
         transform.rotation = Quaternion.Euler(90f, playerLocationZX.eulerAngles.y , 0);

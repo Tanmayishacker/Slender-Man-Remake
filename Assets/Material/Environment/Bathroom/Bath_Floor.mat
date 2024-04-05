@@ -30,7 +30,6 @@ Material:
   - _NORMALMAP
   - _OCCLUSIONMAP
   - _PARALLAXMAP
-  - _RECEIVE_SHADOWS_OFF
   - _SPECULARHIGHLIGHTS_OFF
   - _SPECULAR_SETUP
   m_InvalidKeywords: []
@@ -46,11 +45,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 819f4ac50388e3846bb0fdf258dc72cb, type: 3}
+        m_Texture: {fileID: 2800000, guid: ba589b06138251546b53861a2756feb6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 06fd48d1508191647b338326bf869b16, type: 3}
+        m_Texture: {fileID: 2800000, guid: b4159ff406774bf4d96e3a00f3b4fa20, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -70,7 +69,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 819f4ac50388e3846bb0fdf258dc72cb, type: 3}
+        m_Texture: {fileID: 2800000, guid: ba589b06138251546b53861a2756feb6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -78,15 +77,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 6db246b93602bff499a548806bc4bda2, type: 3}
+        m_Texture: {fileID: 2800000, guid: c0b6702b43fff4e48bb5e77351b2c13d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: 30e7a84ad0b26a44a9744beeab9a2b69, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1d0bed9a58a5eb3498a3bf1d2ba51413, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
-        m_Texture: {fileID: 2800000, guid: d4fa998cdcc98244fa42c53b410d631a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 061e5cfd153098541878bb66a0004892, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -124,8 +123,8 @@ Material:
     - _OcclusionStrength: 0.991
     - _Parallax: 0.005
     - _QueueOffset: 0
-    - _ReceiveShadows: 0
-    - _Smoothness: 1
+    - _ReceiveShadows: 1
+    - _Smoothness: 0.2
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 0
     - _SrcBlend: 1
